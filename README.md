@@ -28,6 +28,7 @@ Understand how annual members and casual riders use Cyclistic bikes differently.
 3. Use seasonal trends for personalized marketing campaigns  
 
 📄 [View full case study](./cyclistic-case-study.pdf)
+https://github.com/itochuhuangjiahui-bit/portfolio/tree/Google-Data-Analytics-Professional-Capstone
 
 ## Tools
 - Excel  
