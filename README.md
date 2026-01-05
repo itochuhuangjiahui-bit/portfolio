@@ -71,6 +71,7 @@ Minimum and maximum ride duration
 Ride distribution by user type and day of week
 These summaries enabled clear comparison of usage behaviour between casual riders and annual members.
 <img width="696" height="415" alt="Screenshot 2026-01-05 at 10 44 07 am" src="https://github.com/user-attachments/assets/fc561824-6bff-4afb-ba60-ef42b3ddb1b2" />
+*Figure 2: Sample dataset showing statical summary, average of `ride_length` grouped by `member_casual`(usertype), average of `ride_length` grouped by `member_casual`(usertype) and `day_of_week`.*
 
 
 ### Alternatively, Using SQL
@@ -83,6 +84,9 @@ WITH ride_length_table AS
     EXTRACT(DAYOFWEEK FROM started_at) AS day_of_week
     FROM `utility-mapper-475309-f6.cyclists_bike_share.Combined sheet` 
   )
+
+## above was copied from step 3
+
 SELECT 
   member_casual,
   day_of_week, 
@@ -98,4 +102,5 @@ ORDER BY
   member_casual, 
   day_of_week  
 ```
+
 <img width="897" height="501" alt="Screenshot 2026-01-05 at 11 56 17 am" src="https://github.com/user-attachments/assets/d802bf16-b673-40da-a0a8-83e9eccf4932" />
