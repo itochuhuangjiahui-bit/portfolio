@@ -1,5 +1,5 @@
 # How Does a Bike-Share Navigate Speedy Success?
-## Cyclistic Case Study completed bt Jiahui(Kelvin) Huang
+## Cyclistic Case Study completed by Jiahui(Kelvin) Huang
 
 ---
 
