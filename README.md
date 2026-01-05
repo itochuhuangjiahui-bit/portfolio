@@ -203,7 +203,7 @@ Based on the findings, the following data-driven recommendations are proposed:
 
 ### 7.1 Target Weekend Casual Riders
 
-Since casual riders are most active and ride longest on weekends, Cyclistic could introduce:
+Since casual riders are most active and tend to take longer rides on weekends, Cyclistic could introduce:
 
 - Weekend membership trials
 - Short-term subscription plans
