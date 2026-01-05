@@ -60,6 +60,7 @@ WITH ride_length_table AS
     FROM `utility-mapper-475309-f6.cyclists_bike_share.Combined sheet` 
   )
 ```
+---
 ## 4. Calculations and Exploratory Analysis
 
 ### Using Excel
@@ -74,7 +75,7 @@ These summaries enabled clear comparison of usage behaviour between casual rider
 
 *Figure 2: Summaries regarding overall statical summary, average of `ride_length` grouped by `member_casual`(usertype), average of `ride_length` grouped by `member_casual`(usertype) and `day_of_week`.*
 
-
+---
 ### Alternatively, Using SQL
 The following query aggregates ride behaviour by `member_casual`(usertype) and `day_of_week`, representing `member_casual`(usertype), `ride_length`, `day_of_week`(Sunday was indicated by 1 and so forth), `ride_count`, `avg_ride_length`, `max_ride_length` and `min_ride_length`:
 ```
@@ -109,6 +110,7 @@ ORDER BY
 *Figure 3: Outcomes showing `member_casual`(usertype), `ride_length`, `day_of_week`(Sunday was indicated by 1 and so forth), `ride_count`, `avg_ride_length`(in second), `max_ride_length` and `min_ride_length`, grouped by usertype and `day_of_week`.*
 
 Export the result to local drive in format of a csv file, naming it `summary_from_SQL`.
+---
 
 ### Using R for visualization
 #### To find out association between `avg_ride_length` and `day_of_week` for both member and casual, first upload the csv file from local drive to R Studio.
@@ -168,6 +170,7 @@ ggplot(data = summary_from_SQL) +
 <img width="863" height="607" alt="Figure 5 Ride Count by Day of Week" src="https://github.com/user-attachments/assets/1e435e9c-b7e9-4317-ac4a-29677bf3a998" />
 
 *Figure 5: Ride Count by day of week.*
+---
 
 ## 5. Key Findings
 
@@ -187,6 +190,7 @@ Based on the analysis of Q1 2019 and Q1 2020 trip data, several clear behavioura
 - **Insight:** 
   - Members rely on Cyclistic as part of their regular transportation habits.
   - Casual riders are more event-driven or leisure-driven, with usage concentrated on non-working days.
+---
 
 ## 6. Business Implications
 
@@ -196,6 +200,7 @@ The observed behavioural differences highlight that casual riders and annual mem
 - **Annual members:** High frequency but shorter duration, reflecting habitual usage and long-term value.
 
 **Implication:** Converting casual riders into annual members could significantly improve revenue stability, provided that conversion strategies align with casual riders’ usage motivations.
+---
 
 ## 7. Recommendations
 
@@ -225,6 +230,7 @@ Marketing campaigns could highlight:
 - **For members:** Focus on reliability and convenience for daily transportation.
 
 *Goal:* Tailor communication to distinct rider motivations to improve conversion effectiveness without alienating existing members.
+---
 
 ## 8. Limitations and Future Analysis
 
