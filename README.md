@@ -1,38 +1,101 @@
-# portfolio
-# Kelvin – Data Analytics Portfolio
+# How Does a Bike-Share Navigate Speedy Success?
+## Cyclistic Case Study
 
-## About Me
-I am a junior data analyst with a background in business and data analysis. 
-I enjoy transforming raw data into actionable insights to support business decision-making.
+---
 
-## Case Studies
+## 1. Introduction
 
-### 1. Cyclistic Bike-Share Case Study
-**Goal:**  
-Understand how annual members and casual riders use Cyclistic bikes differently.
+Cyclistic is a bike-sharing company operating in Chicago. Since its launch in 2016, the company has experienced rapid growth in ridership. Despite this success, Cyclistic’s marketing team believes that long-term profitability depends on increasing the number of annual members, as annual memberships generate more stable and predictable revenue compared to casual rides.
 
-**Process:**  
-- Data cleaning and preparation  
-- Descriptive analysis  
-- Data visualization  
-- Business recommendations  
+The objective of this case study is to identify behavioural differences between casual riders and annual members, and to explore how these insights can support strategies to convert casual riders into long-term subscribers.
 
-**Key Findings:**  
-- Casual riders have longer average ride durations  
-- Members ride more frequently on weekdays  
-- Casual riders are more active on weekends  
+Using historical trip data, this analysis examines ride duration, usage frequency, and weekly riding patterns across different user types. The project demonstrates how raw data can be transformed into actionable business insights and highlights the role of data-driven decision-making in supporting sustainable business growth.
 
-**Recommendations:**  
-1. Target casual riders with weekend-focused membership promotions  
-2. Reinforce membership value for weekday commuters  
-3. Use seasonal trends for personalized marketing campaigns  
+---
 
-📄 [View full case study](./cyclistic-case-study.pdf)
+## 2. Data Process and Analysis
 
-## Tools
-- Excel  
-- SQL  
-- R (basic)  
+This case study is based on a hypothetical company named **Cyclistic**, using real-world public data from Chicago’s **Divvy bike-sharing program**, operated by Motivate International Inc.
 
-## Contact
-- LinkedIn: https://linkedin.com/in/yourname
+The dataset consists of **Q1 trip records from 2019 and 2020**, and includes:
+- Ride start and end timestamps  
+- User type (casual rider or annual member)  
+- Bike type  
+- Station and location information  
+
+All data usage complies with the Divvy Data License Agreement. No personally identifiable information is used, and no attempt is made to identify individual users. This analysis does not imply endorsement or affiliation with Lyft Bikes and Scooters, LLC, or the City of Chicago.
+
+---
+
+## 3. Data Preparation and Cleaning
+
+### Using Microsoft Excel
+
+To enable effective analysis, additional derived variables were created.
+
+- A new column, **`ride_length`**, was calculated as the difference between `started_at` and `ended_at`.  
+  Ride duration was formatted as **HH:MM:SS**, allowing comparison of ride lengths across users.
+
+- A **`day_of_week`** column was generated using the `WEEKDAY()` function to identify weekly riding patterns.
+
+These derived variables were essential for comparing behaviour between casual riders and annual members.
+
+![Sample dataset showing ride_length and day_of_week](https://github.com/user-attachments/assets/dd0686ba-9494-45f6-b7f8-c363f34a5b97)
+
+*Figure 1: Sample dataset showing `started_at`, `ended_at`, `ride_length`, and `day_of_week`.*
+
+---
+
+### Alternatively, Using SQL
+
+Q1 2019 and Q1 2020 data were combined using Excel and uploaded to BigQuery.  
+A temporary table was created to calculate ride duration in seconds and derive the day of week from the start time.
+
+```
+WITH ride_length_table AS
+  (SELECT
+    member_casual,
+    TIMESTAMP_DIFF(ended_at, started_at,SECOND) AS ride_length,
+    EXTRACT(DAYOFWEEK FROM started_at) AS day_of_week
+    FROM `utility-mapper-475309-f6.cyclists_bike_share.Combined sheet` 
+  )
+```
+## 4. Calculations and Exploratory Analysis
+
+### Using Excel
+
+Pivot tables were used to summarise:
+Total number of rides
+Average ride length
+Minimum and maximum ride duration
+Ride distribution by user type and day of week
+These summaries enabled clear comparison of usage behaviour between casual riders and annual members.
+<img width="696" height="415" alt="Screenshot 2026-01-05 at 10 44 07 am" src="https://github.com/user-attachments/assets/fc561824-6bff-4afb-ba60-ef42b3ddb1b2" />
+
+
+### Alternatively, Using SQL
+The following query aggregates ride behaviour by user type and day of week, representing user type, day of week, representing user type(member_casual), ride length, day of week(Sunday was indicated by 1), ride count, mean of ride length, maximum value of ride length and minimum value of ride length, grouped by user type and day of week:
+```
+WITH ride_length_table AS
+  (SELECT
+    member_casual,
+    TIMESTAMP_DIFF(ended_at, started_at,SECOND) AS ride_length,
+    EXTRACT(DAYOFWEEK FROM started_at) AS day_of_week
+    FROM `utility-mapper-475309-f6.cyclists_bike_share.Combined sheet` 
+  )
+SELECT 
+  member_casual,
+  day_of_week, 
+  COUNT(*) AS ride_count,
+  ROUND(AVG(ride_length),0) AS avg_ride_length,
+  ROUND(MAX(ride_length),0) AS max_ride_length,
+  ROUND(MIN(ride_length),0) AS min_ride_length
+FROM ride_length_table
+GROUP BY 
+  member_casual, 
+  day_of_week
+ORDER BY
+  member_casual, 
+  day_of_week  
+```
+<img width="897" height="501" alt="Screenshot 2026-01-05 at 11 56 17 am" src="https://github.com/user-attachments/assets/d802bf16-b673-40da-a0a8-83e9eccf4932" />
