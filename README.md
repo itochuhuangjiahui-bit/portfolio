@@ -42,9 +42,9 @@ Understand behavioural differences between annual members and casual riders to i
 Leverage HR data to optimise workforce planning, recruitment efficiency, and HR processes.
 
 **Process:**  
-- Extracted and cleaned HR datasets from multiple HRIS systems (Elmo, PageUp, LiveHire)  
-- Applied **Python and Excel** for automated reporting, KPI tracking, and anomaly detection  
-- Visualised workforce trends and recruitment metrics using **Power BI**  
+- Extracted and cleaned HR datasets from multiple HRIS systems (Elmo, LiveHire)  
+- Applied **R and Excel** for automated reporting, KPI tracking, and anomaly detection  
+- Visualised workforce trends and recruitment metrics using **Tableau**  
 - Developed automation workflows to reduce manual HR tasks by 50%
 
 **Key Findings:**  
@@ -60,7 +60,7 @@ Leverage HR data to optimise workforce planning, recruitment efficiency, and HR 
 ---
 
 ## Tools & Skills
-- **Data Analysis & Visualization:** Excel (Advanced), R (ggplot2, dplyr), Python (Intermediate), Power BI  
+- **Data Analysis & Visualization:** Excel (Advanced), R (ggplot2, dplyr), Python (Intermediate), Tableau 
 - **Database & Querying:** SQL, HRIS data extraction and manipulation  
 - **HR Systems & Automation:** Elmo, PageUp, LiveHire, Visual Care, DocuSign  
 - **HR Expertise:** Recruitment, HRIS migration, compliance, workforce planning, process automation
@@ -73,59 +73,3 @@ Leverage HR data to optimise workforce planning, recruitment efficiency, and HR 
 - **Mobile:** 0451 792 178  
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--------------
-# Kelvin – Data Analytics Portfolio
-
-## About Me
-I am a junior data analyst with a background in business and data analysis. 
-I enjoy transforming raw data into actionable insights to support business decision-making.
-
-## Case Studies
-
-### 1. Cyclistic Bike-Share Case Study
-**Goal:**  
-Understand how annual members and casual riders use Cyclistic bikes differently.
-
-**Process:**  
-- Data cleaning and preparation  
-- Descriptive analysis  
-- Data visualization  
-- Business recommendations  
-
-**Key Findings:**  
-- Casual riders have longer average ride durations  
-- Members ride more frequently on weekdays  
-- Casual riders are more active on weekends  
-
-**Recommendations:**  
-1. Target casual riders with weekend-focused membership promotions  
-2. Reinforce membership value for weekday commuters  
-3. Use seasonal trends for personalized marketing campaigns  
-
-📄 View full case study:
-https://github.com/itochuhuangjiahui-bit/portfolio/tree/Google-Data-Analytics-Professional-Capstone
-
-
-## Tools
-- Excel  
-- SQL  
-- R (basic)  
-
-## Contact
-- LinkedIn: [https://linkedin.com/in/yourname](https://www.linkedin.com/in/kelvin-h-2947251b1/)
