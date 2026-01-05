@@ -2,7 +2,7 @@
 
 ## About Me
 I am a tech-savvy HR professional and junior data analyst with 5 years’ experience across government, state-owned enterprise, and NDIS sectors.  
-I specialise in transforming HR and operational data into actionable insights using SQL, R, Excel, Python, and Power BI, enabling evidence-based decision-making and process optimisation.
+I specialise in transforming HR and operational data into actionable insights using SQL, R, Excel, Python, and Tableau, enabling evidence-based decision-making and process optimisation.
 
 **Highlights:**
 - Led HRIS migrations and automation projects reducing administrative workload by 50%
