@@ -108,8 +108,11 @@ ORDER BY
 
 *Figure 3: Outcomes showing `member_casual`(usertype), `ride_length`, `day_of_week`(Sunday was indicated by 1 and so forth), `ride_count`, `avg_ride_length`(in second), `max_ride_length` and `min_ride_length`, grouped by usertype and `day_of_week`.*
 
+Export the result to local drive in format of a csv file, naming it `summary_from_SQL`.
+
 ### Using R for visualization
-To find out corellationship between `avg_ride_length` and `day_of_week` for both member and casual:
+#### To find out association between `avg_ride_length` and `day_of_week` for both member and casual, first upload the csv file from local drive to R Studio.
+Then start generating visualization regarding it:
 
 ```
 View(Combined_sheet_Divvy_Trips_2020_Q1)
@@ -132,4 +135,24 @@ library(tidyverse)
 <img width="865" height="612" alt="Average Ride Length by Day of Week" src="https://github.com/user-attachments/assets/0235c33c-701c-4baf-850d-8dccba01daeb" />
 
 *Figure 4: Average ride length by day of week.*
+
+#### To find out association between `ride_count` and `day_of_week` for both member and casual users, generate another graph:
+```
+ggplot(data = summary_from_SQL) +
++     geom_smooth(
++         aes(
++             x = day_of_week,
++             y = ride_count,
++             colour = member_casual
++         )
++     ) +
++     labs(
++         title = "Ride Count by Day of Week",
++         subtitle = "Cyclistic Trips (2019 Q1 & 2020 Q1): Members vs Casual Riders"
++     )
+```
+
+<img width="865" height="604" alt="Ride Count by Day of Week" src="https://github.com/user-attachments/assets/1d072413-4f53-4be6-b1c1-cde38bab9278" />
+
+*Figure 5: Ride Count by day of week.*
 
