@@ -119,40 +119,120 @@ View(Combined_sheet_Divvy_Trips_2020_Q1)
 install.packages("tidyverse")
 library(tidyverse)
 
-> ggplot(data = summary_from_SQL) +
-+     geom_smooth(
-+         aes(
-+             x = day_of_week,
-+             y = avg_ride_length,
-+             colour = member_casual
-+         )
-+     ) +
-+     labs(
-+         title = "Average Ride Length by Day of Week",
-+         subtitle = "Cyclistic Trips (2019 Q1 & 2020 Q1): Members vs Casual Riders"
-+     )
+ggplot(summary_from_SQL,
+       aes(
+         x = factor(day_of_week),
+         y = avg_ride_length,
+         colour = member_casual,
+         group = member_casual
+       )) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Average Ride Length by Day of Week",
+    subtitle = "Cyclistic Trips (2019 Q1 & 2020 Q1): Members vs Casual Riders",
+    x = "Day of Week",
+    y = "Average Ride Length (seconds)"
+  )
 ```
-<img width="865" height="612" alt="Average Ride Length by Day of Week" src="https://github.com/user-attachments/assets/0235c33c-701c-4baf-850d-8dccba01daeb" />
+<img width="862" height="610" alt="Figure 4 Average Ride Length by Day of Week" src="https://github.com/user-attachments/assets/13cb315f-dd61-44a2-974f-13a0a682580c" />
 
 *Figure 4: Average ride length by day of week.*
 
 #### To find out association between `ride_count` and `day_of_week` for both member and casual users, generate another graph:
 ```
 ggplot(data = summary_from_SQL) +
-+     geom_smooth(
-+         aes(
-+             x = day_of_week,
-+             y = ride_count,
-+             colour = member_casual
-+         )
-+     ) +
-+     labs(
-+         title = "Ride Count by Day of Week",
-+         subtitle = "Cyclistic Trips (2019 Q1 & 2020 Q1): Members vs Casual Riders"
-+     )
+  geom_line(
+    aes(
+      x = day_of_week,
+      y = ride_count,
+      colour = member_casual,
+      group = member_casual
+    )
+  ) +
+  geom_point(
+    aes(
+      x = day_of_week,
+      y = ride_count,
+      colour = member_casual
+    )
+  ) +
+  labs(
+    title = "Ride Count by Day of Week",
+    subtitle = "Cyclistic Trips (2019 Q1 & 2020 Q1): Members vs Casual Riders",
+    x = "Day of Week",
+    y = "Ride Count"
+  )
 ```
 
-<img width="865" height="604" alt="Ride Count by Day of Week" src="https://github.com/user-attachments/assets/1d072413-4f53-4be6-b1c1-cde38bab9278" />
+<img width="863" height="607" alt="Figure 5 Ride Count by Day of Week" src="https://github.com/user-attachments/assets/1e435e9c-b7e9-4317-ac4a-29677bf3a998" />
 
 *Figure 5: Ride Count by day of week.*
+
+## 5. Key Findings
+
+Based on the analysis of Q1 2019 and Q1 2020 trip data, several clear behavioural differences emerge between casual riders and annual members.
+
+### 5.1 Ride Length Patterns
+
+- Casual riders consistently show longer average ride durations than annual members across all days of the week.
+- The difference is particularly pronounced during weekends, where casual riders’ average ride length peaks.
+- Annual members maintain relatively stable and shorter ride durations, suggesting usage driven by routine or commuting needs rather than leisure.
+- **Insight:** Casual riders are more likely to use the service for leisure-oriented, longer trips, while members primarily use it for practical, short-distance travel.
+
+### 5.2 Ride Frequency Patterns
+
+- Annual members record a higher number of total rides, especially on weekdays.
+- Ride counts for casual users increase noticeably on weekends, while member ride counts remain comparatively stable throughout the week.
+- **Insight:** 
+  - Members rely on Cyclistic as part of their regular transportation habits.
+  - Casual riders are more event-driven or leisure-driven, with usage concentrated on non-working days.
+
+## 6. Business Implications
+
+The observed behavioural differences highlight that casual riders and annual members are using Cyclistic for fundamentally different purposes:
+
+- **Casual riders:** High engagement duration but low frequency, indicating strong interest but limited commitment.
+- **Annual members:** High frequency but shorter duration, reflecting habitual usage and long-term value.
+
+**Implication:** Converting casual riders into annual members could significantly improve revenue stability, provided that conversion strategies align with casual riders’ usage motivations.
+
+## 7. Recommendations
+
+Based on the findings, the following data-driven recommendations are proposed:
+
+### 7.1 Target Weekend Casual Riders
+
+Since casual riders are most active and ride longest on weekends, Cyclistic could introduce:
+
+- Weekend membership trials
+- Short-term subscription plans
+
+*Goal:* Lower the psychological barrier to membership commitment.
+
+### 7.2 Emphasise Cost Efficiency for Frequent Leisure Use
+
+Marketing campaigns could highlight:
+
+- Cost savings for riders who take multiple long rides per month
+- Comparisons between cumulative casual ride fees and annual membership costs
+
+*Goal:* Appeal to casual riders who underestimate their total spending.
+
+### 7.3 Align Messaging with Usage Motivation
+
+- **For casual riders:** Emphasise leisure, exploration, and flexibility.
+- **For members:** Focus on reliability and convenience for daily transportation.
+
+*Goal:* Tailor communication to distinct rider motivations to improve conversion effectiveness without alienating existing members.
+
+## 8. Limitations and Future Analysis
+
+- Analysis is limited to Q1 data from two years and does not account for seasonal variation.
+- **Future analysis could include:**
+  - Full-year data to capture summer riding behaviour
+  - Geographic analysis of station usage
+  - Analysis of bike type preference by user segment
+
+*Goal:* Further refine marketing strategies and improve customer segmentation.
 
