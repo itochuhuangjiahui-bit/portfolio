@@ -106,4 +106,4 @@ ORDER BY
 
 <img width="897" height="501" alt="Screenshot 2026-01-05 at 11 56 17 am" src="https://github.com/user-attachments/assets/d802bf16-b673-40da-a0a8-83e9eccf4932" />
 
-*Figure 3: Outcomes showing `member_casual`(usertype), `ride_length`, `day_of_week`(Sunday was indicated by 1 and so forth), `ride_count`, `avg_ride_length`, `max_ride_length` and `min_ride_length`, grouped by usertype and `day_of_week`.*
+*Figure 3: Outcomes showing `member_casual`(usertype), `ride_length`, `day_of_week`(Sunday was indicated by 1 and so forth), `ride_count`, `avg_ride_length`(in second), `max_ride_length` and `min_ride_length`, grouped by usertype and `day_of_week`.*
