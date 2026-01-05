@@ -27,9 +27,10 @@ Understand how annual members and casual riders use Cyclistic bikes differently.
 2. Reinforce membership value for weekday commuters  
 3. Use seasonal trends for personalized marketing campaigns  
 
-📄 [View full case study]https://github.com/itochuhuangjiahui-bit/portfolio/tree/Google-Data-Analytics-Professional-Capstone
+📄 View full case study:
+https://github.com/itochuhuangjiahui-bit/portfolio/tree/Google-Data-Analytics-Professional-Capstone
 
-[/cyclistic-case-study.pdf]
+
 ## Tools
 - Excel  
 - SQL  
