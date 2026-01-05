@@ -71,11 +71,12 @@ Minimum and maximum ride duration
 Ride distribution by user type and day of week
 These summaries enabled clear comparison of usage behaviour between casual riders and annual members.
 <img width="696" height="415" alt="Screenshot 2026-01-05 at 10 44 07 am" src="https://github.com/user-attachments/assets/fc561824-6bff-4afb-ba60-ef42b3ddb1b2" />
-*Figure 2: Sample dataset showing statical summary, average of `ride_length` grouped by `member_casual`(usertype), average of `ride_length` grouped by `member_casual`(usertype) and `day_of_week`.*
+
+*Figure 2: Summaries regarding overall statical summary, average of `ride_length` grouped by `member_casual`(usertype), average of `ride_length` grouped by `member_casual`(usertype) and `day_of_week`.*
 
 
 ### Alternatively, Using SQL
-The following query aggregates ride behaviour by user type and day of week, representing user type, day of week, representing user type(member_casual), ride length, day of week(Sunday was indicated by 1), ride count, mean of ride length, maximum value of ride length and minimum value of ride length, grouped by user type and day of week:
+The following query aggregates ride behaviour by `member_casual`(usertype) and `day_of_week`, representing `member_casual`(usertype), `ride_length`, `day_of_week`(Sunday was indicated by 1 and so forth), `ride_count`, `avg_ride_length`, `max_ride_length` and `min_ride_length`:
 ```
 WITH ride_length_table AS
   (SELECT
@@ -104,3 +105,5 @@ ORDER BY
 ```
 
 <img width="897" height="501" alt="Screenshot 2026-01-05 at 11 56 17 am" src="https://github.com/user-attachments/assets/d802bf16-b673-40da-a0a8-83e9eccf4932" />
+
+*Figure 3: Summaries showing `member_casual`(usertype), `ride_length`, `day_of_week`(Sunday was indicated by 1 and so forth), `ride_count`, `avg_ride_length`, `max_ride_length` and `min_ride_length`, grouped by usertype and `day_of_week`
