@@ -1,4 +1,4 @@
-# Kelvin Huang – People Analytics/Data Analytics Portfolio
+# Kelvin Huang – People Analytics Portfolio
 
 ## About Me
 I am a tech-savvy HR professional and junior data analyst with 5 years’ experience across government, state-owned enterprise, and NDIS sectors.  
