@@ -75,6 +75,7 @@ Leverage HR data to optimise workforce planning, recruitment efficiency, and HR 
 ---
 
 ## Certificate
-- Google Data Analytics
-[Coursera XQ2RX0FBHRED.pdf](https://github.com/user-attachments/files/24450129/Coursera.XQ2RX0FBHRED.pdf)
+- Google Data Analytics Certificate: [Google Data Analytics Certificate.pdf](https://github.com/user-attachments/files/24450155/Google.Data.Analytics.Certificate.pdf)
+
+
 
