@@ -73,3 +73,8 @@ Leverage HR data to optimise workforce planning, recruitment efficiency, and HR 
 - **Mobile:** 0451 792 178  
 
 ---
+
+## Certificate
+- Google Data Analytics
+[Coursera XQ2RX0FBHRED.pdf](https://github.com/user-attachments/files/24450129/Coursera.XQ2RX0FBHRED.pdf)
+
