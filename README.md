@@ -181,7 +181,7 @@ Based on the analysis of Q1 2019 and Q1 2020 trip data, several clear behavioura
 ### 5.1 Ride Length Patterns
 
 - Casual riders consistently have longer average ride durations than annual members across all days of the week.
-- The difference is especially noticeable on weekdays and remains high on weekends, although the absolute peak of casual riders’ average ride length occurs on Friday.
+- The difference is especially noticeable on weekdays and remains high on weekends, although the absolute peak of casual riders’ average ride length occurs on Thursday.
 - Annual members maintain relatively stable and shorter ride durations, suggesting usage driven by routine or commuting needs rather than leisure.
 - Insight: Casual riders are more likely to use the service for leisure-oriented, longer trips, while members primarily use it for practical, short-distance travel.
 
